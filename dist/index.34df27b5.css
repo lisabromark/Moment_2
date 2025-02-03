@@ -1,0 +1,147 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-areas: "header header header header"
+                       "main main main main"
+                       "section1 section1 section1 section1"
+                       "footer footer footer footer";
+  height: 100%;
+  display: grid;
+}
+
+nav {
+  background: #d29c9c;
+  grid-area: header;
+  justify-content: center;
+  padding: 1.5em 0;
+  display: grid;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.hamburger span {
+  background-color: #000;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  display: block;
+}
+
+.dropdown {
+  display: none;
+}
+
+.menu {
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  color: #000;
+  border-radius: 5px;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+#main {
+  background: #e2c09e;
+  grid-area: main;
+  place-items: center;
+  margin-top: 0;
+  padding-bottom: 50px;
+  display: grid;
+}
+
+article {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#section1 {
+  background: #f7d0d0;
+  grid-area: section1;
+  place-items: center;
+  display: grid;
+}
+
+footer {
+  background: #d29c9c;
+  grid-area: footer;
+  align-items: center;
+  margin-top: auto;
+  padding: 1em 0;
+}
+
+@media screen and (width <= 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header"
+                         "main main"
+                         "section1 section1"
+                         "footer footer";
+  }
+}
+
+@media screen and (width <= 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "section1"
+                         "footer";
+  }
+
+  .hamburger {
+    margin-right: 10px;
+    display: block;
+  }
+
+  .menu {
+    text-align: center;
+    background-color: #f7d0d0;
+    grid-template-columns: 1fr;
+    margin: 0 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+    position: absolute;
+  }
+
+  .dropdown:checked ~ nav .menu {
+    display: grid;
+  }
+}
+/*# sourceMappingURL=index.34df27b5.css.map */

@@ -1,0 +1,16 @@
+{
+  "name": "moment_1",
+  "version": "1.0.0",
+
+  "author": "Lisa Bromark",
+  "license": "ISC",
+  "source": "src/html/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
