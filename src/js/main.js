@@ -29,4 +29,13 @@ coursesEl.innerHTML ="";
 //Sortera kurser utifrån kursnamn
 
 data.sort((a,b) => a.coursename > b.coursename ? 1: -1);
+console.table(data);
+
+courses.forEach(course=>
+    coursesEl.innerHTML +=`
+    <tr>
+    <td>${course.code}</td>
+    <td>${course.coursename}</td>
+    <td>${course.progression}</td>
+    </tr>`);
 }
