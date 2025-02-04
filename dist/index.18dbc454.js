@@ -600,6 +600,8 @@ let courses = [];
 window.onload = ()=>{
     loadCourses();
 };
+//händelsehanterare för sökning
+document.querySelector("#search").addEventListener("input", filterData);
 async function loadCourses() {
     try {
         const response = await fetch("https://webbutveckling.miun.se/files/ramschema_ht24.json");
@@ -618,12 +620,18 @@ function printCourses(data) {
     //Sortera kurser utifrån kursnamn
     data.sort((a, b)=>a.coursename > b.coursename ? 1 : -1);
     console.table(data);
-    courses.forEach((course)=>coursesEl.innerHTML += `
+    data.forEach((course)=>coursesEl.innerHTML += `
     <tr>
     <td>${course.code}</td>
     <td>${course.coursename}</td>
     <td>${course.progression}</td>
     </tr>`);
+}
+function filterData() {
+    const searchPhrase = document.querySelector("#search").value.trim().toLowerCase();
+    //filtrera ut
+    const filteredData = courses.filter((course)=>course.code.toLowerCase().includes(searchPhrase) || course.coursename.toLowerCase().includes(searchPhrase));
+    printCourses(filteredData);
 }
 
 },{}]},["80cCk","1SICI"], "1SICI", "parcelRequire94c2")
