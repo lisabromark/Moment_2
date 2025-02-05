@@ -45,26 +45,26 @@ function filterData() {
     //filtrera ut
 
     const filteredData = courses.filter(course =>
-        course.code.toLowerCase().includes(searchPhrase)||
+        course.code.toLowerCase().includes(searchPhrase) ||
         course.coursename.toLowerCase().includes(searchPhrase)
     );
     printCourses(filteredData);
 }
 
-document.querySelector("#courseName").addEventListener("click", function(){
-    courses.sort((a, b)=> a.coursename > b.coursename ? 1 : -1);
+document.querySelector("#courseName").addEventListener("click", function () {
+    courses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
     printCourses(courses);
 }
 );
 
-document.querySelector("#courseCode").addEventListener("click", function(){
-    courses.sort((a, b)=> a.code > b.code ? 1 : -1);
+document.querySelector("#courseCode").addEventListener("click", function () {
+    courses.sort((a, b) => a.code > b.code ? 1 : -1);
     printCourses(courses);
 }
 );
 
-document.querySelector("#courseProgression").addEventListener("click", function(){
-    courses.sort((a, b)=> a.progression > b.progression ? 1 : -1);
+document.querySelector("#courseProgression").addEventListener("click", function () {
+    courses.sort((a, b) => a.progression > b.progression ? 1 : -1);
     printCourses(courses);
 }
 );

@@ -4,7 +4,7 @@ body {
     height: 100%;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -17,7 +17,7 @@ html{
         "footer footer footer footer";
     grid-template-rows: auto 1fr 1fr auto;
     height: 100%;
-  }
+}
 
 nav {
     background: rgb(210, 156, 156);
@@ -85,25 +85,26 @@ nav {
 
 }
 
-article{
+article {
     margin: 0 auto;
     max-width: 800px;
     width: 90%;
 }
 
-p{
-line-height: 1.5;
+p {
+    line-height: 1.5;
 }
 
 li {
-margin-bottom:10px;
+    margin-bottom: 10px;
 }
+
 #section1 {
     background: #f7d0d0;
     grid-area: section1;
     display: grid;
     place-items: center;
-    }
+}
 
 
 footer {
@@ -115,9 +116,25 @@ footer {
 
 }
 
-th{
-    cursor: pointer;
+#search {
+    width: 50%;
 }
+
+table th {
+    cursor: pointer;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+table {
+    margin-top: 20px;
+    border-spacing: 20px;
+}
+
+tbody {
+    padding-top: 50px;
+}
+
 
 /* Första brytpunkten. Ser till att innehållet flyttar sig så att endast två bilder ligger sida vid sida istf fyra*/
 @media screen and (max-width:1024px) {

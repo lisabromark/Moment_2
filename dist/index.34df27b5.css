@@ -105,8 +105,23 @@ footer {
   padding: 1em 0;
 }
 
-th {
+#search {
+  width: 50%;
+}
+
+table th {
   cursor: pointer;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+table {
+  border-spacing: 20px;
+  margin-top: 20px;
+}
+
+tbody {
+  padding-top: 50px;
 }
 
 @media screen and (width <= 1024px) {
