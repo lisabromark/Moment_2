@@ -30,11 +30,6 @@ function printCourses(data) {
     // Rensa DOM
     coursesEl.innerHTML = "";
 
-    //Sortera kurser utifrån kursnamn
-
-    data.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
-    console.table(data);
-
     data.forEach(course =>
         coursesEl.innerHTML += `
     <tr>
@@ -55,3 +50,21 @@ function filterData() {
     );
     printCourses(filteredData);
 }
+
+document.querySelector("#courseName").addEventListener("click", function(){
+    courses.sort((a, b)=> a.coursename > b.coursename ? 1 : -1);
+    printCourses(courses);
+}
+);
+
+document.querySelector("#courseCode").addEventListener("click", function(){
+    courses.sort((a, b)=> a.code > b.code ? 1 : -1);
+    printCourses(courses);
+}
+);
+
+document.querySelector("#courseProgression").addEventListener("click", function(){
+    courses.sort((a, b)=> a.progression > b.progression ? 1 : -1);
+    printCourses(courses);
+}
+);

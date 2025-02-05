@@ -617,9 +617,6 @@ function printCourses(data) {
     const coursesEl = document.querySelector("#courses");
     // Rensa DOM
     coursesEl.innerHTML = "";
-    //Sortera kurser utifrån kursnamn
-    data.sort((a, b)=>a.coursename > b.coursename ? 1 : -1);
-    console.table(data);
     data.forEach((course)=>coursesEl.innerHTML += `
     <tr>
     <td>${course.code}</td>
@@ -633,6 +630,18 @@ function filterData() {
     const filteredData = courses.filter((course)=>course.code.toLowerCase().includes(searchPhrase) || course.coursename.toLowerCase().includes(searchPhrase));
     printCourses(filteredData);
 }
+document.querySelector("#courseName").addEventListener("click", function() {
+    courses.sort((a, b)=>a.coursename > b.coursename ? 1 : -1);
+    printCourses(courses);
+});
+document.querySelector("#courseCode").addEventListener("click", function() {
+    courses.sort((a, b)=>a.code > b.code ? 1 : -1);
+    printCourses(courses);
+});
+document.querySelector("#courseProgression").addEventListener("click", function() {
+    courses.sort((a, b)=>a.progression > b.progression ? 1 : -1);
+    printCourses(courses);
+});
 
 },{}]},["80cCk","1SICI"], "1SICI", "parcelRequire94c2")
 

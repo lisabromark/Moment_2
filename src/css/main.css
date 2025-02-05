@@ -115,6 +115,10 @@ footer {
 
 }
 
+th{
+    cursor: pointer;
+}
+
 /* Första brytpunkten. Ser till att innehållet flyttar sig så att endast två bilder ligger sida vid sida istf fyra*/
 @media screen and (max-width:1024px) {
     .container {

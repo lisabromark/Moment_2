@@ -105,6 +105,10 @@ footer {
   padding: 1em 0;
 }
 
+th {
+  cursor: pointer;
+}
+
 @media screen and (width <= 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
