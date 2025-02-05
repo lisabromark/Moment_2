@@ -19,7 +19,7 @@ html {
 }
 
 nav {
-  background: #d29c9c;
+  background: #edb4b4;
   grid-area: header;
   justify-content: center;
   padding: 1.5em 0;
@@ -68,11 +68,9 @@ nav {
 }
 
 #main {
-  background: #e2c09e;
   grid-area: main;
   place-items: center;
   margin-top: 0;
-  padding-bottom: 50px;
   display: grid;
 }
 

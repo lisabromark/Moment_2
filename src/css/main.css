@@ -20,7 +20,7 @@ html {
 }
 
 nav {
-    background: rgb(210, 156, 156);
+    background: rgb(237, 180, 180);
     grid-area: header;
     display: grid;
     justify-content: center;
@@ -70,19 +70,14 @@ nav {
     color: black;
     padding: 0.5em 1em;
     border-radius: 5px;
-
 }
 
 
 #main {
-    background: #e2c09e;
     grid-area: main;
     display: grid;
     place-items: center;
-    padding-bottom: 50px;
     margin-top: 0;
-
-
 }
 
 article {
